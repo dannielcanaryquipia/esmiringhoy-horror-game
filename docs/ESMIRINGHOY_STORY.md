@@ -4,6 +4,8 @@ By Danniel Canary Quipia · October 2026
 
 The full story bible for Esmiringhoy: the lore, characters, notes, prayer and endings that the game's text, tasks and trailer draw from.
 
+> **Design document.** This describes the full planned game. The current build is smaller: 1–4 players over LAN, four candles and a smaller house. Check the README for what the build does today.
+
 ## Premise
 
 For 139 years the Villareal family has paid for its fortune by keeping a demon asleep under their house. The last keeper, Lola Remedios, has just died. On the third night of her wake, during a typhoon, the candles around her coffin go out on their own and the Esmiringhoy wakes.

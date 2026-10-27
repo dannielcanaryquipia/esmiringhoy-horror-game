@@ -67,7 +67,7 @@ the `Agent` tool instead:
 - **Zero warnings policy** — fix every Output/Debugger warning. Common traps here: unused params (prefix `_`), and locals/params shadowing base-class members (`size`, `look_at`, `name`, `position`, `rotation`, `scale`, `visible`). Use `look_target` not `look_at`, etc.
 - **Typed GDScript** — declare types explicitly; `:=` can't infer from an untyped (Variant) receiver, so write `var t: Tween = untyped.create_tween()`.
 - **Keep scripts focused**, roughly ≤400 lines; split by responsibility.
-- **No downloaded assets / addons** — everything is procedural (Godot primitives, CSG, or the Python generators in `tools/`).
+- **No downloaded assets / addons** — everything is procedural (Godot primitives, CSG, or the Python generators in `tools/`). The one exception is the SIL OFL fonts in `assets/fonts/`. Any new outside asset or addon must be logged in `docs/ASSET_LICENSES.md` first.
 - **Physics layers (do not renumber):** 1 world · 2 demon blockers (moonlit patches) · 3 players · 4 demons · 5 interactables (candles) · 6 hiding spots.
 - **Lessons:** doorways ≥1.4 m (demon agent radius 0.4); NavMesh cell_size/height must match `project.godot` (0.1); catch range (1.6 m) > player+demon radius; `room.gd` is `@tool` — guard runtime-only code with `if not Engine.is_editor_hint()`.
 
@@ -87,3 +87,12 @@ godot --headless --import                 # import assets, catch parse errors
 godot --headless --quit-after 10          # boot ~10 s, watch for errors/warnings
 ```
 Use `Godot_v4.x-stable_win64_console.exe` so Output appears in the terminal.
+
+---
+
+# Release & compliance (skills in `C:\Users\Danniel Canary\.opencode\skills\`)
+- **`game-release-compliance`** — run before a GitHub push of new content, any exported build, a trailer or store-page update, or when asked to make the game "safe to publish" or "truly mine". It is adapted from `website-compliance-checklist` for a downloadable co-op game. Results go in `docs/COMPLIANCE_AUDIT.md`; the asset log is `docs/ASSET_LICENSES.md`.
+- For the itch.io page or any website, also run **`website-compliance-checklist`** (the original 20-item web checklist).
+- **`Claude-Cortex/skills/terms-of-service`** (MIT) — draft a EULA, privacy note or terms for builds and pages. Drafts are for review, never final legal text.
+- Never invent the owner's legal name, contact, license choice or authorship claims. Ask, and leave `{{PLACEHOLDER}}`s out of published files.
+- Any new `@rpc("any_peer")` must check `multiplayer.get_remote_sender_id()` and be validated on the host (see audit item G16).

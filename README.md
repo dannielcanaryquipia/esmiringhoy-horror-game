@@ -11,7 +11,7 @@
   <img alt="Godot 4.7" src="https://img.shields.io/badge/Godot-4.7-478CBF?logo=godotengine&logoColor=white">
   <img alt="GDScript" src="https://img.shields.io/badge/language-GDScript-355570">
   <img alt="Players 1–4" src="https://img.shields.io/badge/players-1%E2%80%934%20(LAN)-ff5a1f">
-  <img alt="Platform" src="https://img.shields.io/badge/platform-Windows%20%7C%20Linux-2e2622">
+  <img alt="Tested on Windows" src="https://img.shields.io/badge/tested%20on-Windows-2e2622">
   <img alt="Status: in testing" src="https://img.shields.io/badge/status-in%20testing-c8202a">
 </p>
 
@@ -29,7 +29,7 @@
     <img src="media/trailer_preview.gif" alt="Esmiringhoy trailer preview (click for the full video)" width="720">
   </a>
   <br>
-  <sub>▶ Click the preview for the full 61-second trailer (<code>media/esmiringhoy_trailer.mp4</code>).</sub>
+  <sub>▶ Click the preview for the full 61-second trailer (<code>media/esmiringhoy_trailer.mp4</code>). All footage is captured in-game.</sub>
 </p>
 
 <!--
@@ -37,6 +37,12 @@
   edit this README on github.com, drag media/esmiringhoy_trailer.mp4 into the editor,
   and keep the https://github.com/user-attachments/assets/... link it inserts on its own line.
 -->
+
+## Content note
+
+Esmiringhoy is a horror game with demonic imagery, jump scares, death (shown off-screen) and Filipino Catholic and folk-belief themes (a wake, prayers, candles). It is not made for children.
+
+**Photosensitivity warning:** the game has flickering lights and a full-screen red flash when you are caught.
 
 ## The story
 
@@ -128,7 +134,9 @@ The first import takes a moment while Godot imports the textures, sounds and fon
 2. The others choose **Join Co-op (LAN)** and enter that address.
 3. Everyone needs to be on the same network. The game uses **UDP port 24567**, so allow Godot (or the exported game) through the Windows firewall when it asks.
 
-Up to 4 players. The host runs the Esmiringhoy's AI. Internet play (UPnP and room codes) is planned. See [`docs/ESMIRINGHOY_DEPLOY_MULTIPLAYER_BRIEF.md`](docs/ESMIRINGHOY_DEPLOY_MULTIPLAYER_BRIEF.md).
+Up to 4 players. The host runs the Esmiringhoy's AI.
+
+**Privacy:** the game collects no personal data and sends nothing to the internet. Settings are saved only on your computer (`user://settings.cfg`). In LAN co-op, players' computers exchange IP addresses and in-game positions directly with each other. Internet play (UPnP and room codes) is planned. See [`docs/ESMIRINGHOY_DEPLOY_MULTIPLAYER_BRIEF.md`](docs/ESMIRINGHOY_DEPLOY_MULTIPLAYER_BRIEF.md).
 
 ## Project structure
 
@@ -200,6 +208,8 @@ See [`trailer/README.txt`](trailer/README.txt) for details.
 | [`docs/ESMIRINGHOY_STORY.md`](docs/ESMIRINGHOY_STORY.md) | Lore, characters, notes, the Oración and the endings |
 | [`docs/ESMIRINGHOY_GAMEPLAY_BRIEF.md`](docs/ESMIRINGHOY_GAMEPLAY_BRIEF.md) | Gameplay design and the plan for the full house |
 | [`docs/ESMIRINGHOY_DEPLOY_MULTIPLAYER_BRIEF.md`](docs/ESMIRINGHOY_DEPLOY_MULTIPLAYER_BRIEF.md) | Export presets, itch.io with butler, UPnP, lobby and noray room codes |
+| [`docs/ASSET_LICENSES.md`](docs/ASSET_LICENSES.md) | Where every font, texture, sound and image comes from, and its license |
+| [`docs/COMPLIANCE_AUDIT.md`](docs/COMPLIANCE_AUDIT.md) | Release checklist results: licensing, notices, claims, privacy, multiplayer security |
 
 ## Roadmap
 
@@ -218,6 +228,7 @@ The game is in testing, so this list is what comes before any store release.
 - **Engine:** [Godot Engine](https://godotengine.org) 4.7, written in GDScript
 - **Development tools:** OpenCode, Freebuff and Claude Code (AI-assisted development)
 - **Textures and sounds:** generated procedurally by the scripts in `tools/`
+- **Asset sources and licenses:** see [`docs/ASSET_LICENSES.md`](docs/ASSET_LICENSES.md)
 - **Fonts:** [IM Fell English](https://fonts.google.com/specimen/IM+Fell+English) (Igino Marini), [Inter](https://rsms.me/inter/) (Rasmus Andersson) and [JetBrains Mono](https://www.jetbrains.com/lp/mono/) (JetBrains), all under the SIL Open Font License. See [`assets/fonts/licenses`](assets/fonts/licenses).
 
 ## License

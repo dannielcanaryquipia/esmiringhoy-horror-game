@@ -30,7 +30,9 @@ trailer_out/
 /ESMIRINGHOY_GAMEPLAY_BRIEF.md
 
 # --- Local AI-tool setup (machine-specific paths) ---------------------------
-.claude/
+# .claude/skills/ IS tracked (project skills); only local settings are ignored.
+.claude/settings.json
+.claude/settings.local.json
 .mcp.json
 graphify-out/
 
