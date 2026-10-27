@@ -1,0 +1,48 @@
+# --- Godot 4 ---------------------------------------------------------------
+# Import cache and editor state. Godot rebuilds these on first open.
+.godot/
+/android/
+
+# Exported builds
+build/
+*.exe
+*.pck
+*.x86_64
+
+# Export presets can hold keystore paths and passwords. Remove this line
+# once export_presets.cfg has no secrets in it and you want to share it.
+export_presets.cfg
+
+# --- Trailer recording -----------------------------------------------------
+# Raw Movie Maker output and press-kit copies (the README uses media/).
+trailer_out/
+
+# Copy of the trailer in the project root (media/esmiringhoy_trailer.mp4 is the tracked one)
+/esmiringhoy_trailer.mp4
+
+# One-off helpers that split big files into 1 MB parts for transfer
+/split_1mb.bat
+/split_trailer.bat
+/trailer/split_1mb.gd
+/trailer/split_file.gd
+
+# Duplicate of docs/ESMIRINGHOY_GAMEPLAY_BRIEF.md
+/ESMIRINGHOY_GAMEPLAY_BRIEF.md
+
+# --- Local AI-tool setup (machine-specific paths) ---------------------------
+.claude/
+.mcp.json
+graphify-out/
+
+# --- Python (tools/) -------------------------------------------------------
+__pycache__/
+*.pyc
+.venv/
+
+# --- OS / editors ----------------------------------------------------------
+.DS_Store
+Thumbs.db
+desktop.ini
+.vscode/
+.idea/
+*.tmp
